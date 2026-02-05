@@ -33,3 +33,13 @@ st.scatter_chart(
     data=iris_df, 
     color="species", 
     ) 
+st.markdown("---")
+st.subheader("📥 Download Data")
+
+csv = iris_df.to_csv(index=False)
+st.download_button(
+    label="Download Iris Dataset as CSV",
+    data=csv,
+    file_name="iris_data.csv",
+    mime="text/csv"
+)
